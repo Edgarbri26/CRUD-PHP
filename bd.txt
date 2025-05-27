@@ -1,0 +1,16 @@
+// esto es para crear la base de datos cambia el nombre y donde este este "crud_php_bd" pon el tuyo 
+
+CREATE DATABASE crud_php_bd CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE crud_php_bd;
+
+CREATE TABLE users(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    email VARCHAR(50),
+    contrasenna VARCHAR(255)
+);
+
+INSERT INTO users (nombre , email, contrasenna) VALUES('juan' , 'juan@gmail.com', sha2('12345', 256));
+INSERT INTO users (nombre , email, contrasenna) VALUES('pedro' , 'pedro@gmail.com', sha2('12345', 256));
+INSERT INTO users (nombre , email, contrasenna) VALUES('carlos' , 'carlos@gmail.com', sha2('12345', 256));
